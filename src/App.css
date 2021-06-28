@@ -1,38 +1,216 @@
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: "lovelycoffe";
+  src: local("lovelycoffe"),
+   url("./fonts/lovelycoffe/LovelyCoffee-jEVeO.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Delux";
+    src: local("Delux"),
+     url('./fonts/Delux/DeluxesBold-8MzWg.ttf') format("truetype");
+    }
+  
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+body{
+  background: -webkit-linear-gradient(to right, #396afc, #2948ff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #396afc, #2948ff);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  margin-top: 5%;
+}
+
+
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+  font-family: "Delux";
+  font-size: 2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.form-control{
+  font-size: 2.5rem;
+  color:whitesmoke;
+  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+.input-field{
+
+  font-family: 'Akaya Kanadaka', cursive;
+  font-size: 1.2rem;
+  font-weight: 400;
+  /* padding-left: 1rem; */
+  padding: 0.3rem;
+  padding-left: 1.2rem;
+  box-shadow: 1rem;
+  border: none;
+  outline: none;
+  position: relative;
+  color:black;
+  width: 28%;
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .input-field{
+    width: 35%;
+  }
+ 
+}
+
+
+@media screen and (max-width: 800px) {
+  
+  .input-field{
+    width: 60%;
+  }
+ 
+}
+
+@media screen and (max-width: 510px) {
+  
+  .input-field{
+    width: 100%;
+  }
+  .list-items{
+    margin: 10%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.submit-btn{
+  font-family: 'Akaya Kanadaka', cursive;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+  background-color: rgb(0, 183, 255);
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: all 1s ease-in-out;
+  
+}
+
+.submit-btn:hover{
+  background-color:rgba(53, 100, 255, 0.2);
+  color:#fff;
+}
+
+
+.list-container{
+  margin: auto;
+  margin-top: 2rem;
+  max-width: 400px;
+}
+
+.list-items{
+  font-family: 'Akaya Kanadaka', cursive; 
+  padding-top: 5px; 
+  padding-left: 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items:flex-start;
+  font-size: 1.2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
+  background-color: #1488cc;
+
+}
+
+.btn-container{
+  
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-left: 100px;
+ 
+ 
+}
+
+
+.alert{
+
+  position: relative;
+  display: flex;
+  justify-content:  center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  font-size: 1rem;
+
+  
+  
+}
+
+.clear-btn{
+  letter-spacing :  2px;
+  font-family: 'Akaya Kanadaka', cursive;  
+  font-size: 1.1em;
+  background-color:rgba(255, 2, 2, 0.705);
+  width: 10em;
+  height: 2.5em;
+  border: none;
   color: white;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.clear-btn:hover{
+  color: rgb(255, 255, 255);
+  background-color:rgba(255, 2, 2, 0.651);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.alert-danger{
+  color:red;
+  box-shadow: 0 0 5px rgba(255, 14, 14, 0.418);
+  background-color: rgba(255, 44, 44, 0.507);
+}
+.alert-success{
+
+  background-color: rgb(0, 255, 0,0.2);;
+  color:rgb(0, 255, 0);
+  box-shadow: 0 0 2px rgba(14, 255, 46, 0.596);
+
+}
+
+
+.edit-btn{
+  color: greenyellow;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.delete-btn{
+  color:coral;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
